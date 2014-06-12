@@ -1,0 +1,158 @@
+// Mixins
+insetBoxShadow()
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
+
+html, body
+	min-height: 100%
+	width: 100%
+
+	// overflow: hidden
+	overflow hidden
+
+#topRow
+	padding-top 1em
+	background-color #1C1E22
+
+#icon
+	margin-left 1em
+	width 100px
+	height 100px
+#navTop
+	background-color #2E3338
+	border-bottom 1px solid #2E3338
+	box-shadow: 0 5px 5px -5px #000000
+#intro
+	padding-top: 52px
+
+
+#vertMenu
+	background-color #24282A
+	min-height 100%
+	height 100%
+	box-shadow: 5px 0 5px -5px #000000
+
+#content
+	margin-left: -2em
+	padding-left: 0
+	min-height: 100%
+	height 100%
+
+	overflow-x hidden
+
+#searchBar
+	margin-top 2em
+#searchPage
+	display block
+	padding-bottom 1em
+	position relative
+searchHeight = 585px
+#searchWrapper
+	min-height searchHeight
+	height 400px
+	// border 1px solid white
+
+#searchOutput
+	min-height searchHeight
+	min-width 450px
+	// border 2px solid white
+#outputWrapper
+	min-height searchHeight
+// Video Divs
+.videoDiv
+	min-width 680px
+	min-height 75px
+	max-height 75px
+	margin-bottom 10px
+.videoDiv:hover
+	background-color #1C1E22
+	border-radius 10px
+.videoTextWrapper
+	display inline
+.videoOverlayWrap
+	float left
+	width 128px
+	height 72px
+	margin-right 8px
+.videoThumb
+	float left
+	width 128px
+	height 72px
+	margin-right 8px
+.videoTitle
+	display inline-block
+	margin-bottom 4px
+	max-width 500px
+.videoOverlay
+	text-align center
+	max-height 72px
+	opacity 0
+	-webkit-transition opacity .25s ease
+.videoOverlayWrap:hover .videoOverlay
+	opacity 0.7
+	background-color black
+.videoOverlayPlus
+	top -72px
+	position relative
+	font-family Helvetica
+	font-weight 900
+	font-size 50px
+	a
+		text-decoration none
+	a:hover
+		color red
+		opacity 1
+
+// Meta
+
+#searchMeta
+	height 200px
+	margin-top 2em	
+	background-color #1C1E22
+	overflow-y scroll
+	insetBoxShadow()
+#searchMetaText
+	margin-left 5px
+// YTplayer
+#ytCover
+	height 169px
+	width 231px
+	position absolute
+	display block
+	background-color #24282A
+#ytCover2
+	width 231px
+	height 5px
+	position absolute
+	display block
+	margin-top 173px
+	background-color #24282A
+#ytWrapper
+	margin-top 200px
+
+// Scroll bar
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+// Iphones
+@media screen and (max-device-width: 480px)
+	#ytCover, #ytCover2
+		width 0px
+		height 0px
+	#ytPlayer
+		width: 100%

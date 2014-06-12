@@ -1,0 +1,106 @@
+%html
+	%head
+		%title Zen Music
+		%link(rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css")
+		%link(rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+		%link(rel="stylesheet" href="./css/main.css")
+
+		%script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		
+				
+		%script(src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+
+		%script(src="./js/search.js" type="text/javascript")
+	%body
+		%script(type="text/javascript")
+			resetSR();
+
+		%nav.nav-bar.navbar-default.navbar-fixed-top
+			.container-fluid#navTop
+				.navbar-header
+					%a.navbar-brand
+						%span.glyphicon.glyphicon-music
+						Zen Music
+		
+		.container-fluid.collapse.in#intro
+			.row#topRow
+				.col-xs-4
+					.row
+						%img.img-rounded#icon(src="./imgs/music.png" )
+						%h4.text-right(style="display: inline-block; margin-left: 1em;")
+							Welcome to Zen Music!
+							<br/> <br/>
+							%p
+								%button.btn.btn-info.btn-sm#beginBtn(style="float: left;") Begin
+				.col-xs-1
+				.col-xs-6
+					.row
+						%ul.list-group
+							%li
+								%h4
+									Search for your favourite artists
+									%small Listen to your favourite songs
+							%li
+								%h4
+									Search through YouTube
+									%small Music videos and more
+							%li
+								%h4
+									Save lyrics as you go
+									%small Download and more
+
+
+
+		.row#contentWrapper
+			-# Left Nav Bar
+			.col-xs-2
+				%ul.nav.nav-tabs.nav-stacked#vertMenu
+					%li
+						%a(href="#")
+							%span.glyphicon.glyphicon-home
+							%b Home
+					%li
+						%a(href="#")
+							%b.vertTitle Info
+					.container-fluid#leftQueue
+						%b test
+
+					.content.text-center#ytWrapper
+						.content#ytCover
+						.content#ytCover2
+						.content#ytPlayer
+
+			.col-xs-10.container-fluid
+				-# Entire Wrapper
+				.container-fluid.text#content
+					.row-fluid#searchWrapper
+						-# Search Container
+						.col-xs-4#searchContainer
+							.input-group.input-group-sm
+								%span.input-group-addon
+									%span.glyphicon.glyphicon-search
+								%input.form-control#searchVal(type="text" placeholder="Katy Perry - Roar")
+								%span.input-group-btn
+									%button.btn.btn-info#searchBtn(type="button") Go
+							.content#searchMeta
+								.content#searchMetaText
+									%h4 Roar - Katy Perry
+									%p Katheryn Elizabeth "Katy" Hudson (born October 25, 1984), better known by her stage name Katy Perry, is an American singer, songwriter, and actress. She grew up in Santa Barbara, California. She pursued a career in gospel music as a teen and released her debut studio album, Katy Hudson (2001), having had limited exposure to mainstream pop music in her childhood. The following year, she moved to Los Angeles to in an attempt to venture into pop and rock music. She recorded a collaborative album with The Matrix, which was released in 2009. A solo album she worked on with Glen Ballard was also recorded and never released.
+								
+						-# Search Output
+						.col-xs-8#outputWrapper
+							.content#searchOutput
+							.row.text-center#searchBar
+								%b#searchPage
+								%button.btn.btn-default.btn-sm.text-center#searchPrev(type="button")
+									%span.glyphicon.glyphicon-backward
+								%button.btn.btn-default.btn-sm.text-center#searchNext(type="button")
+									%span.glyphicon.glyphicon-forward
+						%hr/
+
+
+
+
+		%script(src="https://apis.google.com/js/client.js?onload=ApiReady" type="text/javascript")
+
+		%script(src="./js/main.js")

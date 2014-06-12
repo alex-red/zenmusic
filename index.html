@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Zen Music</title>
+    <link href='https://netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='./css/main.css' rel='stylesheet'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+    <script src='./js/search.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      resetSR();
+    </script>
+    <nav class='nav-bar navbar-default navbar-fixed-top'>
+      <div class='container-fluid' id='navTop'>
+        <div class='navbar-header'>
+          <a class='navbar-brand'>
+            <span class='glyphicon glyphicon-music'></span>
+            Zen Music
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class='container-fluid collapse in' id='intro'>
+      <div class='row' id='topRow'>
+        <div class='col-xs-4'>
+          <div class='row'>
+            <img class='img-rounded' id='icon' src='./imgs/music.png'>
+            <h4 class='text-right' style='display: inline-block; margin-left: 1em;'>
+              Welcome to Zen Music!
+              <br/> <br/>
+              <p>
+                <button class='btn btn-info btn-sm' id='beginBtn' style='float: left;'>Begin</button>
+              </p>
+            </h4>
+          </div>
+        </div>
+        <div class='col-xs-1'></div>
+        <div class='col-xs-6'>
+          <div class='row'>
+            <ul class='list-group'>
+              <li>
+                <h4>
+                  Search for your favourite artists
+                  <small>Listen to your favourite songs</small>
+                </h4>
+              </li>
+              <li>
+                <h4>
+                  Search through YouTube
+                  <small>Music videos and more</small>
+                </h4>
+              </li>
+              <li>
+                <h4>
+                  Save lyrics as you go
+                  <small>Download and more</small>
+                </h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='row' id='contentWrapper'>
+      <div class='col-xs-2'>
+        <ul class='nav nav-tabs nav-stacked' id='vertMenu'>
+          <li>
+            <a href='#'>
+              <span class='glyphicon glyphicon-home'></span>
+              <b>Home</b>
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              <b class='vertTitle'>Info</b>
+            </a>
+          </li>
+          <div class='container-fluid' id='leftQueue'>
+            <b>test</b>
+          </div>
+          <div class='content text-center' id='ytWrapper'>
+            <div class='content' id='ytCover'></div>
+            <div class='content' id='ytCover2'></div>
+            <div class='content' id='ytPlayer'></div>
+          </div>
+        </ul>
+      </div>
+      <div class='col-xs-10 container-fluid'>
+        <div class='container-fluid text' id='content'>
+          <div class='row-fluid' id='searchWrapper'>
+            <div class='col-xs-4' id='searchContainer'>
+              <div class='input-group input-group-sm'>
+                <span class='input-group-addon'>
+                  <span class='glyphicon glyphicon-search'></span>
+                </span>
+                <input class='form-control' id='searchVal' placeholder='Katy Perry - Roar' type='text'>
+                <span class='input-group-btn'>
+                  <button class='btn btn-info' id='searchBtn' type='button'>Go</button>
+                </span>
+              </div>
+              <div class='content' id='searchMeta'>
+                <div class='content' id='searchMetaText'>
+                  <h4>Roar - Katy Perry</h4>
+                  <p>Katheryn Elizabeth "Katy" Hudson (born October 25, 1984), better known by her stage name Katy Perry, is an American singer, songwriter, and actress. She grew up in Santa Barbara, California. She pursued a career in gospel music as a teen and released her debut studio album, Katy Hudson (2001), having had limited exposure to mainstream pop music in her childhood. The following year, she moved to Los Angeles to in an attempt to venture into pop and rock music. She recorded a collaborative album with The Matrix, which was released in 2009. A solo album she worked on with Glen Ballard was also recorded and never released.</p>
+                </div>
+              </div>
+            </div>
+            <div class='col-xs-8' id='outputWrapper'>
+              <div class='content' id='searchOutput'></div>
+              <div class='row text-center' id='searchBar'>
+                <b id='searchPage'></b>
+                <button class='btn btn-default btn-sm text-center' id='searchPrev' type='button'>
+                  <span class='glyphicon glyphicon-backward'></span>
+                </button>
+                <button class='btn btn-default btn-sm text-center' id='searchNext' type='button'>
+                  <span class='glyphicon glyphicon-forward'></span>
+                </button>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='https://apis.google.com/js/client.js?onload=ApiReady' type='text/javascript'></script>
+    <script src='./js/main.js'></script>
+  </body>
+</html>
